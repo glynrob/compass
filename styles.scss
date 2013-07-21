@@ -1,0 +1,96 @@
+/* SCSS STYLES */
+
+// Variables
+$green: #689B00;
+$blue: #1440AB;
+
+// Mixins
+@mixin border-radius ($radius: 5px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin box-shadow ($x: 0px, $y: 3px, $blur: 5px, $alpha: 0.5) {
+	-webkit-box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+	-moz-box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+	box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+}
+@mixin gradient ($origin: left, $start: #ffffff, $stop: #000000) {
+    background-color: $start;
+    background-image: -webkit-linear-gradient($origin, $start, $stop);
+    background-image: -moz-linear-gradient($origin, $start, $stop);
+    background-image: -o-linear-gradient($origin, $start, $stop);
+    background-image: -ms-linear-gradient($origin, $start, $stop);
+    background-image: linear-gradient($origin, $start, $stop);
+}
+@mixin btn-gradient ($origin: left, $alpha: 0.2) {
+    background-image: -webkit-linear-gradient($origin, rgba(0,0,0,0.0), rgba(0,0,0,$alpha));
+    background-image: -moz-linear-gradient($origin, rgba(0,0,0,0.0), rgba(0,0,0,$alpha));
+    background-image: -o-linear-gradient($origin, rgba(0,0,0,0.0), rgba(0,0,0,$alpha));
+    background-image: -ms-linear-gradient($origin, rgba(0,0,0,0.0), rgba(0,0,0,$alpha));
+    background-image: linear-gradient($origin, rgba(0,0,0,0.0), rgba(0,0,0,$alpha));
+}
+
+// IMPLEMENTATION
+body{
+	background-color:desaturate($blue, 80%); // function desaturate
+	font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+	text-align:center;
+	padding:4em;
+}
+.green{
+	background-color:$green;
+}
+.btn{
+	@include border-radius(10px);
+	@include btn-gradient(top, 0.3);
+	@include box-shadow(5px, 5px, 6px, 0.3);
+	padding:10px;
+	margin:10px;
+	font-size:30px;
+	color:#FFFFFF;
+	text-decoration:none;
+	border: #000000 solid 3px;
+	
+	// Nested Rule
+	&:hover {
+		border-color: #CCCCCC;
+		@include btn-gradient(bottom, 0.3);
+	}
+}
+
+/* SPRITE STYLES */
+
+@import "snails/*.png";
+@mixin sprite_css($name) {
+	@include snails-sprite($name);
+	height: snails-sprite-height($name);
+	width: snails-sprite-width($name);
+}
+.options a {
+	display: inline-block;
+	cursor:pointer;
+}
+.options {
+	margin-top:20px;
+	.option1{
+		@include sprite_css(Burn-Snail-icon);
+		&:hover {
+			@include sprite_css(Turbo-Snail-icon);
+		}
+	}
+	.option2{
+		@include sprite_css(Skidmark-Snail-icon);
+		&:hover {
+			@include sprite_css(Whiplash-Snail-icon);
+		}
+	}
+	.option3{
+		@include sprite_css(Smoove-Move-Snail-icon);
+		&:hover {
+			@include sprite_css(White-Shadow-Snail-icon);
+		}
+	}
+}

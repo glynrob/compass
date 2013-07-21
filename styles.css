@@ -1,0 +1,100 @@
+/* SCSS STYLES */
+/* line 35, styles.scss */
+body {
+  background-color: #606060;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* line 39, styles.scss */
+.container {
+  text-align: center;
+  padding: 4em;
+}
+
+/* line 43, styles.scss */
+.green {
+  background-color: #689b00;
+}
+
+/* line 46, styles.scss */
+.btn {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  -webkit-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin: 10px;
+  font-size: 30px;
+  color: #FFFFFF;
+  text-decoration: none;
+  border: #000000 solid 3px;
+}
+/* line 58, styles.scss */
+.btn:hover {
+  border-color: #CCCCCC;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+/* SPRITE STYLES */
+/* line 82, snails/*.png */
+.snails-sprite, .options .option1, .options .option1:hover, .options .option2, .options .option2:hover, .options .option3, .options .option3:hover {
+  background: url('/images/snails-s31398677ee.png') no-repeat;
+}
+
+/* line 72, styles.scss */
+.options a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* line 76, styles.scss */
+.options {
+  margin-top: 20px;
+}
+/* line 78, styles.scss */
+.options .option1 {
+  background-position: 0 -128px;
+  height: 128px;
+  width: 128px;
+}
+/* line 80, styles.scss */
+.options .option1:hover {
+  background-position: 0 0;
+  height: 128px;
+  width: 128px;
+}
+/* line 84, styles.scss */
+.options .option2 {
+  background-position: 0 -512px;
+  height: 128px;
+  width: 128px;
+}
+/* line 86, styles.scss */
+.options .option2:hover {
+  background-position: 0 -384px;
+  height: 128px;
+  width: 128px;
+}
+/* line 90, styles.scss */
+.options .option3 {
+  background-position: 0 -640px;
+  height: 128px;
+  width: 128px;
+}
+/* line 92, styles.scss */
+.options .option3:hover {
+  background-position: 0 -256px;
+  height: 128px;
+  width: 128px;
+}
